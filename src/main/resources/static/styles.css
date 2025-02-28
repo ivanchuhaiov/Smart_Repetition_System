@@ -1,0 +1,240 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #E3F2FD;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Заголовок */
+header {
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Основной контейнер */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Контейнер с календарем и материалами */
+.container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Календарь */
+#calendar {
+    flex: 1;
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.today {
+    background-color: #66BB6A;
+    color: white;
+}
+
+/* Правая колонка */
+.right-column {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#create-material, #materials-list {
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Вводные поля и кнопки */
+select, button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input {
+    display: block;
+    width: 96.5%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #66BB6A;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #57A05B;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #66BB6A;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    text-align: center;
+}
+
+/* Выравнивание колонок */
+th:nth-child(1), td:nth-child(1) { width: 5%; }
+th:nth-child(2), td:nth-child(2) { width: 25%; }
+th:nth-child(3), td:nth-child(3) { width: 15%; }
+th:nth-child(4), td:nth-child(4) { width: 20%; }
+th:nth-child(5), td:nth-child(5) { width: 20%; }
+th:nth-child(6), td:nth-child(6) { width: 15%; }
+
+/* Чередование строк */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Кнопка редактирования */
+.edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #66BB6A;
+}
+
+.edit-btn:hover {
+    color: #57A05B;
+}
+
+/* Модальное окно */
+.modal {
+    position: absolute;
+    display: none;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 200px;
+}
+
+.modal select, .modal button {
+    width: 100%;
+    margin-top: 10px;
+}
+#level-modal {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.today {
+    background-color: #28a745; /* Зеленый цвет для сегодняшнего дня */
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.selected-day {
+    background-color: #007bff; /* Синий цвет для выбранного дня */
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+#calendar {
+    width: 50%; /* Теперь ширина равна списку материалов */
+}
+
+.right-column {
+    width: 50%; /* Теперь календарь и список материалов одинаковой ширины */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+#calendar {
+    width: 30%; /* Календарь теперь занимает 30% */
+}
+
+.right-column {
+    width: 70%; /* Правая колонка с материалами теперь занимает 70% */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
