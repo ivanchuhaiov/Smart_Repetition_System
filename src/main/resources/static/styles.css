@@ -1,240 +1,337 @@
-/* Основные стили */
+/* Основные стили для страницы */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #E3F2FD;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: 'Roboto', sans-serif; /* Устанавливаем шрифт */
+    background-color: #E3F2FD; /* Устанавливаем цвет фона */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    display: flex; /* Устанавливаем flex-контейнер */
+    flex-direction: column; /* Располагаем элементы в колонку */
+    align-items: center; /* Выравниваем по центру */
 }
 
-/* Заголовок */
+/* Стили для заголовка страницы */
 header {
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+    background-color: #FFFFFF; /* Белый фон */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    width: 100%; /* Растягиваем на всю ширину */
+    padding: 15px; /* Добавляем внутренний отступ */
+    text-align: center; /* Выравниваем текст по центру */
+    font-size: 24px; /* Устанавливаем размер шрифта */
+    font-weight: bold; /* Делаем текст жирным */
 }
 
-/* Основной контейнер */
+/* Основной контейнер страницы */
 main {
-    width: 90%;
-    max-width: 1200px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    width: 90%; /* Задаем ширину 90% от родительского контейнера */
+    max-width: 1200px; /* Ограничиваем максимальную ширину */
+    margin-top: 20px; /* Добавляем верхний отступ */
+    display: flex; /* Используем flex-контейнер */
+    flex-direction: column; /* Располагаем элементы вертикально */
+    gap: 20px; /* Добавляем расстояние между элементами */
 }
 
-/* Контейнер с календарем и материалами */
+
+/* Общий контейнер */
 .container {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
+    width: 100%; /* Ширина на весь экран */
+    display: flex; /* Отображение в строку */
+    gap: 40px; /* Расстояние между элементами */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
 }
 
-/* Календарь */
+/* Стили для календаря */
 #calendar {
-    flex: 1;
-    background: #FFFFFF;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 30%;
+    flex: 1; /* Растягиваем календарь на всю доступную ширину */
+    background: #FFFFFF; /* Устанавливаем белый фон */
+    padding: 15px; /* Добавляем внутренний отступ */
+    border-radius: 10px; /* Закругляем углы */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    text-align: center; /* Выравниваем текст по центру */
 }
 
+/* Стили для заголовка календаря */
 #calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    display: flex; /* Используем flex-контейнер */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравниваем элементы по центру */
+    margin-bottom: 10px; /* Добавляем нижний отступ */
 }
 
+/* Сетка календаря */
 #calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+    display: grid; /* Используем CSS Grid */
+    grid-template-columns: repeat(7, 1fr); /* Создаем 7 колонок */
+    gap: 5px; /* Добавляем расстояние между ячейками */
 }
 
+/* Стили для каждого дня в календаре */
 .day {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    background-color: #FFF;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    width: 40px; /* Фиксированная ширина */
+    height: 40px; /* Фиксированная высота */
+    line-height: 40px; /* Центрируем текст */
+    text-align: center; /* Выравниваем текст по центру */
+    background-color: #FFF; /* Белый фон */
+    border-radius: 5px; /* Закругляем углы */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    cursor: pointer; /* Делаем курсор в виде указателя */
 }
 
+/* Стили для текущего дня */
+/* Стили для сегодняшнего дня в календаре */
 .today {
-    background-color: #66BB6A;
+    background-color: #28a745; /* Зеленый цвет */
+    color: white; /* Белый текст */
+    font-weight: bold; /* Жирный шрифт */
+    border-radius: 50%; /* Закругленные края */
+}
+
+/* Кнопки календаря */
+.calendar-button {
+    background-color: #66BB6A; /* Зеленый цвет */
     color: white;
+    font-size: 16px;
+    border-radius: 12px; /* Скругленные углы */
+    min-width: 45px; /* Минимальная ширина */
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Запрещаем перенос текста */
+    height: auto; /* Автоматическая высота */
+    padding: 10px 15px; /* Отступы для удобочитаемости */
 }
 
-/* Правая колонка */
+
+
+
+
+
+/* Правая колонка (материалы) */
 .right-column {
-    flex: 1.5;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    width: 70%;
+    flex: 1.5; /* Увеличиваем ширину колонки с материалами */
+    display: flex; /* Используем flex-контейнер */
+    flex-direction: column; /* Располагаем элементы в колонку */
+    gap: 20px; /* Добавляем расстояние между элементами */
 }
 
+
+/* Стили для секций материалов */
 #create-material, #materials-list {
-    background: #FFFFFF;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF; /* Белый фон */
+    padding: 15px; /* Внутренний отступ */
+    border-radius: 10px; /* Закругляем углы */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем тень */
 }
 
-/* Вводные поля и кнопки */
-select, button {
+/* Общие стили для всех элементов формы */
+input, select, button {
     display: block;
     width: 100%;
-    padding: 10px;
+    max-width: 100%; /* Растягиваем элементы на всю ширину */
+    padding: 12px;
     margin-top: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Учитывает padding и border внутри ширины */
 }
 
-input {
-    display: block;
-    width: 96.5%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Стили для полей ввода */
+input, select {
+    width: 100%;
+    max-width: 100%; /* Растягиваем на всю доступную ширину */
 }
 
+/* Кнопки */
 button {
-    background-color: #66BB6A;
-    color: white;
     font-weight: bold;
     cursor: pointer;
     border: none;
+    padding: 12px 20px;
+    min-width: 120px; /* Минимальная ширина */
+    text-align: center;
+    width: 100%; /* Растягиваем кнопку на всю ширину */
+    display: block;
+    margin: 0 auto;
 }
 
-button:hover {
-    background-color: #57A05B;
-}
 
-/* Таблица */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-thead {
+/* Стиль для кнопки сохранения */
+button.confirm {
     background-color: #66BB6A;
     color: white;
+    margin-top: 10px; /* Добавляем отступ сверху */
 }
 
+/* Эффект наведения */
+button:hover {
+    opacity: 0.9;
+}
+/* Кнопки переключения месяца */
+button.edit {
+    background-color: #66BB6A; /* Зеленый цвет */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+/* Эффект наведения */
+button.edit:hover {
+    opacity: 0.9;
+}
+
+
+
+
+
+/* Таблица материалов */
+table {
+    width: 100%; /* Растягиваем таблицу на всю ширину */
+    border-collapse: collapse; /* Убираем промежутки между границами */
+    margin-top: 15px; /* Добавляем верхний отступ */
+}
+
+/* Заголовок таблицы */
+thead {
+    background-color: #66BB6A; /* Зеленый фон */
+    color: white; /* Белый текст */
+}
+
+/* Ячейки таблицы */
 th, td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
+    padding: 10px; /* Внутренний отступ */
+    text-align: center; /* Выравниваем текст по центру */
+    border: 1px solid #ddd; /* Добавляем границу */
 }
 
-th {
-    text-align: center;
-}
-
-/* Выравнивание колонок */
-th:nth-child(1), td:nth-child(1) { width: 5%; }
-th:nth-child(2), td:nth-child(2) { width: 25%; }
-th:nth-child(3), td:nth-child(3) { width: 15%; }
-th:nth-child(4), td:nth-child(4) { width: 20%; }
-th:nth-child(5), td:nth-child(5) { width: 20%; }
-th:nth-child(6), td:nth-child(6) { width: 15%; }
-
-/* Чередование строк */
+/* Чередование строк таблицы */
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* Светло-серый цвет для четных строк */
 }
+
+
+
 
 /* Кнопка редактирования */
 .edit-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    color: #66BB6A;
+    background: none; /* Убираем фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Делаем курсор указателем */
+    font-size: 18px; /* Размер шрифта */
+    color: #66BB6A; /* Зеленый цвет текста и иконки */
+    padding: 5px 10px; /* Отступы */
+    display: flex; /* Размещаем элементы в столбец */
+    flex-direction: column; /* Иконка сверху, текст снизу */
+    align-items: center; /* Центрируем по горизонтали */
+    gap: 2px; /* Отступ между иконкой и текстом */
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
 }
 
+/* Увеличиваем кнопку при наведении */
 .edit-btn:hover {
-    color: #57A05B;
+    background: #66BB6A;
+    color: white;
+    padding: 15px 15px;
 }
+
+
+
+
 
 /* Модальное окно */
 .modal {
-    position: absolute;
-    display: none;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    width: 200px;
+    position: absolute; /* Абсолютное позиционирование */
+    display: none; /* Скрываем по умолчанию */
+    background: white; /* Белый фон */
+    padding: 15px; /* Внутренний отступ */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    z-index: 100; /* Поверх других элементов */
+    width: 200px; /* Фиксированная ширина */
 }
 
 .modal select, .modal button {
-    width: 100%;
-    margin-top: 10px;
+    width: 100%; /* Элементы занимают всю ширину */
+    margin-top: 10px; /* Отступ сверху */
 }
+
+/* Модальное окно для выбора уровня */
 #level-modal {
-    display: none;
-    position: absolute;
-    background: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1000;
+    display: none; /* Скрываем по умолчанию */
+    position: absolute; /* Абсолютное позиционирование */
+    background: white; /* Белый фон */
+    border: 1px solid #ccc; /* Серый контур */
+    padding: 10px; /* Внутренний отступ */
+    z-index: 1000; /* Поверх других элементов */
 }
-
-.today {
-    background-color: #28a745; /* Зеленый цвет для сегодняшнего дня */
+/* Кнопка ОК (подтверждение) */
+button.ok {
+    background-color: #66BB6A; /* Зеленый цвет */
     color: white;
-    font-weight: bold;
-    border-radius: 50%;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    text-align: center;
 }
 
+/* Эффект наведения для кнопки ОК */
+button.ok:hover {
+    background-color: #4CAF50; /* Темно-зеленый при наведении */
+    opacity: 0.9;
+}
+
+/* Кнопка Отмена */
+button.cancel {
+    background-color: #E57373; /* Красный цвет */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+/* Эффект наведения для кнопки Отмена */
+button.cancel:hover {
+    background-color: #D32F2F; /* Темно-красный при наведении */
+    opacity: 0.9;
+}
+
+/* Контейнер кнопок внутри модального окна */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    flex: 1; /* Чтобы обе кнопки были одинакового размера */
+}
+
+
+/* Стили для выбранного дня в календаре */
 .selected-day {
-    background-color: #007bff; /* Синий цвет для выбранного дня */
-    color: white;
-    border-radius: 50%;
-    font-weight: bold;
+    background-color: #007bff; /* Синий цвет */
+    color: white; /* Белый текст */
+    border-radius: 50%; /* Закругленные края */
+    font-weight: bold; /* Жирный шрифт */
 }
 
-#calendar {
-    width: 50%; /* Теперь ширина равна списку материалов */
-}
 
-.right-column {
-    width: 50%; /* Теперь календарь и список материалов одинаковой ширины */
-}
 
-.container {
-    width: 100%;
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
 
-#calendar {
-    width: 30%; /* Календарь теперь занимает 30% */
-}
 
-.right-column {
-    width: 70%; /* Правая колонка с материалами теперь занимает 70% */
-}
 
-.container {
-    width: 100%;
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
